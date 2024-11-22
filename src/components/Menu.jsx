@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Menu = ({ categories, selectedCategory, onCategoryChange }) => {
+
+  // set default category
+  useEffect(() => {
+    if (categories.length > 0 && !selectedCategory) {
+      onCategoryChange(categories[0])
+    }
+  }, [categories, selectedCategory])
+
   return (
     <aside className="menu">
       <ul>
