@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.banner {
+  background-color: #4caf50;
+  color: white;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  font-weight: bold;
+  width: 192px;
+}
+
+.menu .active {
+  color: #4caf50;
+  text-decoration: underline;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.main-panel {
+  flex: 1;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: top;
+  gap: 10px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.search-result {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product-list {
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.product .product-name {
+  font-weight: 600;
+  flex: 1;
+  padding: 4px;
+}
+.product .product-price {
+  text-align: right;
+  padding: 4px;
 }
